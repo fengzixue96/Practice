@@ -8,22 +8,22 @@ int sherlockAndAnagrams(string s) {
     map<string, int> mp;
     int j;
     int l = s.length();
-    for (int k = 0;k < l;k++) {   // ´´ÔìÒ»¸ö×Öµä£¬°ÑËùÓĞn(n-1)/2¸ö´Ê¶¼·Å½øÈ¥ÁË(¼Ó·¨Ô­Àí)
+    for (int k = 0;k < l;k++) {   // åˆ›é€ ä¸€ä¸ªå­—å…¸ï¼ŒæŠŠæ‰€æœ‰n(n-1)/2ä¸ªè¯éƒ½æ”¾è¿›å»äº†(åŠ æ³•åŸç†)
         ss = "";
         for (int i = 0;i < l - k;i++) {
             j = k + i;
             ss = ss + s[j];
             sn = ss;
-            sort(sn.begin(), sn.end());   // ×Ö·û´®×Ô¼ºÅÅĞòºó¾ÍÃ»ÓĞË³ĞòÖ®·ÖÁË
+            sort(sn.begin(), sn.end());   // å­—ç¬¦ä¸²è‡ªå·±æ’åºåå°±æ²¡æœ‰å†…éƒ¨é¡ºåºä¹‹åˆ†äº†ï¼Œå…¶ä¸­å…è®¸æœ‰ç›¸åŒçš„é¡¹
             mp[sn]++;
         }
     }
     long long int ans = 0;
     map<string, int> ::iterator it;
-    for (it = mp.begin(); it != mp.end(); it++) {
+    for (it = mp.begin(); it != mp.end(); it++) {  // æ­¤æ—¶mpä¸­æ²¡æœ‰ç›¸åŒçš„é¡¹
         long long  vl = (long long)(it->second);
         if (vl > 1) {
-            ans += (vl * (vl - 1)) / 2LL;  //2LLÊÇlong long£¬Èç¹û»»³Éint¾ÍÊÇ2
+            ans += (vl * (vl - 1)) / 2LL;  //2LLæ˜¯long longï¼Œå¦‚æœæ¢æˆintå°±æ˜¯2
         }
     }
     return ans;
