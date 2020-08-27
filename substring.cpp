@@ -1,3 +1,6 @@
+// çœ‹ä¸¤ä¸ªstringä¸­æ˜¯å¦æœ‰é‡å¤çš„substringï¼ˆå¯ç®€åŒ–ä¸ºæ˜¯å¦æœ‰ä»»æ„é‡å¤çš„å­—æ¯ï¼‰
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,8 +10,8 @@ string twoStrings(string s1, string s2) {
     map <char, int> k;
     int counter = 0;
     for (int y = 0;y < s1.length(); y++)  // string use ".length" 
-        k[s1[y]]++;                       // ½«s1µÄsubstring¼ÓÈëk
-    for (int y = 0;y < s2.length(); y++)  // ÔÚkÖĞ²éÕÒs2ÖĞµÄsubstring
+        k[s1[y]]++;                       // å°†s1çš„substringåŠ å…¥k
+    for (int y = 0;y < s2.length(); y++)  // åœ¨kä¸­æŸ¥æ‰¾s2ä¸­çš„substring
         if (k[s2[y]])
             counter = 1;
 
@@ -17,7 +20,7 @@ string twoStrings(string s1, string s2) {
     else
         return "NO";
 }
-//ºÍmap.cpp²»Í¬£¬ºóÕßĞèÒª±È½Ï¸öÊı£¬ËùÒÔ½¨Á¢Á½¸ömap£»Ç°ÕßÖ»ĞèÈ·¶¨ÊÇ·ñÓĞÖØ¸´µÄÄÚÈİ¡£
+//å’Œmap.cppä¸åŒï¼Œåè€…éœ€è¦æ¯”è¾ƒä¸ªæ•°ï¼Œæ‰€ä»¥å»ºç«‹ä¸¤ä¸ªmapï¼›å‰è€…åªéœ€ç¡®å®šæ˜¯å¦æœ‰é‡å¤çš„å†…å®¹ã€‚
 
 int main()
 {

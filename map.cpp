@@ -1,3 +1,5 @@
+// 两个字符串数组，看note中的所有单词都能在magazine中找到，且数量：note < magazine
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -19,8 +21,8 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
     for (it = no.begin(); it != no.end(); it++) {
         if (ma[it->first] < it->second) {
             //(*it).first will give you the key and (*it).second will give you the value
-            //�Ƚϸ����� magazine < note => unsuccessful
-            //itΪ�н�
+            //比较个数： magazine < note => unsuccessful
+            //it为中介
             success = 0;
             break;
         }
