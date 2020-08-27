@@ -1,3 +1,5 @@
+// 在第a个和第b个数之间都加上k
+
 #include <bits/stdc++.h>
 
 using namespace std;
