@@ -19,7 +19,7 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
     map<string, int> ::iterator it;
     bool success = 1;
     for (it = no.begin(); it != no.end(); it++) { // map(如no)的循环内容是互不相同的
-        if (ma[it->first] < it->second) {
+        if (ma[it->first] < it->second) { // it->second还可写为ma[it->first]或ma[no[1]]
             //(*it).first will give you the key(实际值) and (*it).second will give you the value(个数)
             //比较个数： magazine < note => unsuccessful
             //it为中介
